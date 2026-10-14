@@ -1,0 +1,298 @@
+{
+  "evaluation": "Frozen model official test evaluation; not a real-service performance guarantee",
+  "revision": "eabec4b7a66324b79cc8a0ad856d1731dc26fe1a",
+  "model_sha256": "f77b2180429fa25c23ffeb048b14eacca98c43a66bc91aff0ac4daf90e71c176",
+  "threshold": 0.5,
+  "overall": {
+    "rows": 168060,
+    "benign_rows": 91260,
+    "phishing_rows": 76800,
+    "accuracy": 0.9368201832678805,
+    "balanced_accuracy": 0.9332099222003067,
+    "phishing_precision": 0.9679554260825296,
+    "phishing_recall": 0.89125,
+    "phishing_f1": 0.928020391284895,
+    "false_positive_rate": 0.02483015559938637,
+    "false_negative_rate": 0.10875,
+    "confusion_matrix": {
+      "rows": "actual",
+      "columns": "predicted",
+      "axis_order": [
+        "benign (1)",
+        "phishing (0)"
+      ],
+      "values": [
+        [
+          88994,
+          2266
+        ],
+        [
+          8352,
+          68448
+        ]
+      ]
+    },
+    "undefined_precision_zero_denominator": false
+  },
+  "secondary_nonoverlap": {
+    "rows": 71802,
+    "benign_rows": 28881,
+    "phishing_rows": 42921,
+    "accuracy": 0.8803515222417203,
+    "balanced_accuracy": 0.8919471247838643,
+    "phishing_precision": 0.962095514994885,
+    "phishing_recall": 0.8326460240907714,
+    "phishing_f1": 0.8927023617720159,
+    "false_positive_rate": 0.04875177452304283,
+    "false_negative_rate": 0.16735397590922857,
+    "confusion_matrix": {
+      "rows": "actual",
+      "columns": "predicted",
+      "axis_order": [
+        "benign (1)",
+        "phishing (0)"
+      ],
+      "values": [
+        [
+          27473,
+          1408
+        ],
+        [
+          7183,
+          35738
+        ]
+      ]
+    },
+    "undefined_precision_zero_denominator": false
+  },
+  "korean": {
+    "rows": 174,
+    "benign_rows": 9,
+    "phishing_rows": 165,
+    "accuracy": 0.9195402298850575,
+    "balanced_accuracy": 0.9575757575757575,
+    "phishing_precision": 1.0,
+    "phishing_recall": 0.9151515151515152,
+    "phishing_f1": 0.9556962025316456,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.08484848484848485,
+    "confusion_matrix": {
+      "rows": "actual",
+      "columns": "predicted",
+      "axis_order": [
+        "benign (1)",
+        "phishing (0)"
+      ],
+      "values": [
+        [
+          9,
+          0
+        ],
+        [
+          14,
+          151
+        ]
+      ]
+    },
+    "undefined_precision_zero_denominator": false
+  },
+  "coverage": {
+    "total_rows": 168060,
+    "evaluated_rows": 168060,
+    "rejected_or_failed_rows": 0,
+    "coverage": 1.0,
+    "input_rejected_rows": 0,
+    "label_problem_rows": 0,
+    "prediction_failed_rows": 0,
+    "note": "Reason categories can overlap; rejected_or_failed_rows is the unique row union",
+    "input_rejection_reasons": {},
+    "prediction_failure_reasons": {}
+  },
+  "stratified_errors": [
+    {
+      "scope": "overall",
+      "project_label": 1,
+      "stratum": "root",
+      "rows": 8083,
+      "misclassified": 1078,
+      "error_rate": 0.1333663243845107
+    },
+    {
+      "scope": "overall",
+      "project_label": 1,
+      "stratum": "detail",
+      "rows": 83177,
+      "misclassified": 1188,
+      "error_rate": 0.014282794522524256
+    },
+    {
+      "scope": "overall",
+      "project_label": 1,
+      "stratum": "query",
+      "rows": 52,
+      "misclassified": 11,
+      "error_rate": 0.21153846153846154
+    },
+    {
+      "scope": "overall",
+      "project_label": 1,
+      "stratum": "korean",
+      "rows": 9,
+      "misclassified": 0,
+      "error_rate": 0.0
+    },
+    {
+      "scope": "overall",
+      "project_label": 0,
+      "stratum": "root",
+      "rows": 47885,
+      "misclassified": 2878,
+      "error_rate": 0.06010232849535345
+    },
+    {
+      "scope": "overall",
+      "project_label": 0,
+      "stratum": "detail",
+      "rows": 28915,
+      "misclassified": 5474,
+      "error_rate": 0.18931350510115857
+    },
+    {
+      "scope": "overall",
+      "project_label": 0,
+      "stratum": "query",
+      "rows": 18398,
+      "misclassified": 1109,
+      "error_rate": 0.06027829111859985
+    },
+    {
+      "scope": "overall",
+      "project_label": 0,
+      "stratum": "korean",
+      "rows": 165,
+      "misclassified": 14,
+      "error_rate": 0.08484848484848485
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 1,
+      "stratum": "root",
+      "rows": 6195,
+      "misclassified": 815,
+      "error_rate": 0.13155770782889428
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 1,
+      "stratum": "detail",
+      "rows": 22686,
+      "misclassified": 593,
+      "error_rate": 0.026139469276205588
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 1,
+      "stratum": "query",
+      "rows": 9,
+      "misclassified": 5,
+      "error_rate": 0.5555555555555556
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 1,
+      "stratum": "korean",
+      "rows": 2,
+      "misclassified": 0,
+      "error_rate": 0.0
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 0,
+      "stratum": "root",
+      "rows": 20874,
+      "misclassified": 2736,
+      "error_rate": 0.13107214716872664
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 0,
+      "stratum": "detail",
+      "rows": 22047,
+      "misclassified": 4447,
+      "error_rate": 0.20170544745316824
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 0,
+      "stratum": "query",
+      "rows": 6748,
+      "misclassified": 699,
+      "error_rate": 0.10358624777711915
+    },
+    {
+      "scope": "secondary_nonoverlap",
+      "project_label": 0,
+      "stratum": "korean",
+      "rows": 107,
+      "misclassified": 13,
+      "error_rate": 0.12149532710280374
+    }
+  ],
+  "test_dates": {
+    "nonmissing": 168060,
+    "parse_failures": 0,
+    "minimum": "2025-09-08T00:00:00+00:00",
+    "maximum": "2025-12-16T00:00:00+00:00",
+    "warning": "Dataset-provided dates only; do not infer future-time evaluation or collection chronology without additional evidence"
+  },
+  "overlap": {
+    "train": {
+      "url_in": {
+        "rows": 0,
+        "unique_values": 0
+      },
+      "domain_in": {
+        "rows": 72691,
+        "unique_values": 13931
+      },
+      "sha256_in": {
+        "rows": 0,
+        "unique_values": 0
+      },
+      "url_label_conflict_rows": 0
+    },
+    "validation": {
+      "url_in": {
+        "rows": 0,
+        "unique_values": 0
+      },
+      "domain_in": {
+        "rows": 23566,
+        "unique_values": 3540
+      },
+      "sha256_in": {
+        "rows": 0,
+        "unique_values": 0
+      },
+      "url_label_conflict_rows": 0
+    }
+  },
+  "actual_label_counts": {
+    "benign": 91260,
+    "phish": 76800
+  },
+  "card_count_discrepancy": "Card total 168060 matches actual; card phish count 76876 differs from actual 76800",
+  "local_inference": {
+    "model_file_bytes": 2105348,
+    "model_loading_ms": 738.674,
+    "sample_rows": 1000,
+    "warmup_calls": 20,
+    "random_state": 42,
+    "median_ms": 2.2535,
+    "mean_ms": 2.406103,
+    "p95_ms": 3.5038199999999997,
+    "loading_scope": "joblib.load plus class check; Python/library imports and model SHA-256 reading excluded; file may already be OS-cached",
+    "scope": "original URL validation, TF-IDF transform, predict_proba, class-0 score selection and label/dict return; timing/CSV output overhead excluded",
+    "caveat": "Single local process, sequential warmed calls; excludes API/network/browser extension; not end-to-end response time"
+  }
+}

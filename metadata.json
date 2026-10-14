@@ -1,0 +1,65 @@
+{
+  "model_version": "url_detector_v1",
+  "model_file": "url_char_tfidf_logreg_phreshphish_v1.joblib",
+  "model_sha256": "f77b2180429fa25c23ffeb048b14eacca98c43a66bc91aff0ac4daf90e71c176",
+  "threshold": 0.5,
+  "label_mapping": {
+    "benign": 1,
+    "phish": 0
+  },
+  "classes": [
+    0,
+    1
+  ],
+  "decision_rule": "classes_ == 0 probability >= 0.5 => phishing (0); otherwise benign (1)",
+  "input_policy": "Original URL string; same validate_url as frozen integration example; no URL access, decoding, scheme addition or truncation. sklearn char analyzer retains its internal consecutive-whitespace normalization.",
+  "source_input_policy_sha256": "d2175765f27fa2325826f8e02b9dbd5ac0fc8611eef17f9b2ed55cf744b2c3ae",
+  "vectorizer": {
+    "analyzer": "char",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "min_df": 5,
+    "max_features": 50000,
+    "lowercase": false,
+    "sublinear_tf": true,
+    "norm": "l2"
+  },
+  "classifier": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 2000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": null,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "actual_features": 50000,
+  "training_input_sha256": {
+    "train": "15034b92e9767b59a08852ad64ea52dc52b4ef3320a2b5ebb423de9b1addf019",
+    "validation": "b8b54fdcdccca7cda05e1cee9dac69ad62fb31b8d3b2c643206dfc32410d5c31"
+  },
+  "runtime_packages": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "narwhals": "2.27.1",
+    "cloudpickle": "3.1.2"
+  },
+  "tested_python": "3.14.6",
+  "minimum_python": "3.12",
+  "status": "Fixed integration candidate v1; unchanged model and threshold",
+  "score_meaning": "Uncalibrated model class-0 output, not a validated real-world risk probability",
+  "code_license": "Not specified; repository owner must decide",
+  "model_license": "Not determined by dataset license alone; repository owner must review distribution terms"
+}

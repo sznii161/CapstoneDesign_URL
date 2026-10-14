@@ -1,0 +1,13 @@
+{
+  ".gitignore": "0aa47f531fae6a6825c37478e8d3e0fb7eb85c4eb8df348c3bee9daf8e530636",
+  "DATASET_CARD.md": "6dea4ff46c6b9f6a1495b9bb7f968331d4adeef29ad6040006415a017917473f",
+  "DATA_SOURCE.md": "086420009373cdf80ff7357a7c696be13845094389ba6a804f16d1050e90b337",
+  "evaluation_summary.json": "de5df766ec3e251c781b6eb8f55556240393a89489c1656d720b60ef343028c0",
+  "example.py": "3b3289e9c5d9c6ebfc0804d905e954e0225027da29f7e56e5e31a58999c69eb8",
+  "inference.py": "02cfc997cebe2d9a7c8f185616e42e0e09b556e95b576804a74f11f67babab9a",
+  "metadata.json": "0e64382a854ac4a4b85c447fa79726085784d1a648403ef6e225e996f39787c0",
+  "README.md": "2a5564e2603bcd4948d3a2830e4a3a87467389f2c931f7dd3d7d05c7cd1a0704",
+  "requirements.txt": "f8392e2999bde2f535686a4b0d9e98468c06ef3cdff92251864fe0aaf97908b3",
+  "url_char_tfidf_logreg_phreshphish_v1.joblib": "f77b2180429fa25c23ffeb048b14eacca98c43a66bc91aff0ac4daf90e71c176",
+  "verification.json": "83f22c3ad58efa29a2d87cdc14d4ea0c404d66972f709bcc0bfbc7e6db0e57ac"
+}

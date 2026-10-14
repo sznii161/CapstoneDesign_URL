@@ -1,0 +1,21 @@
+{
+  "model_copy_sha256_equal": true,
+  "source_model_sha256": "f77b2180429fa25c23ffeb048b14eacca98c43a66bc91aff0ac4daf90e71c176",
+  "handoff_model_sha256": "f77b2180429fa25c23ffeb048b14eacca98c43a66bc91aff0ac4daf90e71c176",
+  "portable_copy_outside_project": true,
+  "unrelated_working_directory": true,
+  "isolated_python_path": true,
+  "original_and_handoff_scores_exactly_equal": true,
+  "original_and_handoff_labels_exactly_equal": true,
+  "compared_inputs": 5,
+  "input_policy_ast_exact_match": true,
+  "invalid_cases_rejected": 9,
+  "model_loaded_once_and_reused": true,
+  "minimal_dependency_check": "pandas/xgboost/tldextract/datasets/pyarrow disabled in isolated child; existing pinned runtime libraries used; fresh pip install not tested",
+  "cli_example_passed": true,
+  "cli_invalid_input_error_exit_code": 2,
+  "model_or_threshold_changed": false,
+  "model_version": "url_detector_v1",
+  "threshold": 0.5,
+  "existing_project_hashes_unchanged": true
+}
