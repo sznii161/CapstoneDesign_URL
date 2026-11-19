@@ -145,15 +145,6 @@ $("url-form").addEventListener("submit", (event) => {
   event.preventDefault();
   inspectUrl($("url-input").value, "manual");
 });
-$("fill-demo").addEventListener("click", () => {
-  $("url-input").value = "https://secure.account.verify.nuri-bank-login.example/confirm";
-  inspectUrl($("url-input").value, "manual");
-});
-$("fill-email-demo").addEventListener("click", () => {
-  $("email-title").value = "긴급 계정 확인 안내";
-  $("email-body").value = "24시간 이내에 계정을 확인해 주세요. 아래 주소에서 로그인해 주세요.\nhttps://secure.account.verify.nuri-bank-login.example/confirm";
-  $("email-form").requestSubmit();
-});
 $("open-detail").addEventListener("click", () => {
   if (activeTabId === null) {
     showError("url-error", "상세 화면을 열려면 일반 웹페이지 탭을 먼저 열어 주세요.");
