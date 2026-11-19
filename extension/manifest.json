@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "피싱 URL 검사 - 시연용",
+  "description": "URL과 이메일 검사 화면을 보여주는 캡스톤 프로토타입입니다.",
+  "version": "0.1.0",
+  "minimum_chrome_version": "116",
+  "permissions": ["activeTab", "sidePanel", "storage"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "action": {
+    "default_title": "피싱 URL 검사 - 캡스톤 시연용",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/sch-seal16.png",
+      "48": "icons/sch-seal48.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/sch-seal16.png",
+    "48": "icons/sch-seal48.png",
+    "128": "icons/sch-seal128.png"
+  }
+}
