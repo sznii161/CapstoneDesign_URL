@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "minimum_chrome_version": "116",
   "permissions": ["activeTab", "sidePanel", "storage"],
+  "host_permissions": ["http://127.0.0.1/*"],
   "action": {
     "default_title": "피싱 URL 검사 - 캡스톤 시연용",
     "default_popup": "popup.html",
