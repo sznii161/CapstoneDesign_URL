@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>피싱 URL 검사</title>
+    <link rel="stylesheet" href="popup.css">
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <main class="popup-app">
+      <header class="app-header">
+        <img class="app-mark" src="icons/sch-seal128.png" alt="순천향대학교 원형 로고">
+        <div class="app-title">
+          <strong>피싱 URL 검사</strong>
+          <small>캡스톤 확장 프로그램</small>
+        </div>
+        <span class="demo-tag">시연용</span>
+      </header>
+
+      <nav class="tab-bar" role="tablist" aria-label="검사 종류">
+        <button id="url-tab" class="tab active" type="button" role="tab" aria-controls="url-view" aria-selected="true">URL 검사</button>
+        <button id="email-tab" class="tab" type="button" role="tab" aria-controls="email-view" aria-selected="false">이메일 검사</button>
+      </nav>
+
+      <section id="url-view" class="view" role="tabpanel" aria-labelledby="url-tab">
+        <div class="section-label">현재 페이지</div>
+        <div id="current-page-card" class="current-page">
+          <span id="current-host" class="current-host">주소를 확인하는 중...</span>
+          <span id="current-url" class="current-url"></span>
+          <button id="check-current" class="text-button" type="button" disabled>현재 페이지 검사</button>
+        </div>
+
+        <section id="url-result" class="result" aria-live="polite" hidden>
+          <div id="url-result-source" class="result-source">현재 페이지 검사 결과</div>
+          <div class="result-top">
+            <span id="url-status-icon" class="status-icon" aria-hidden="true">!</span>
+            <div>
+              <strong id="url-headline"></strong>
+              <small id="url-result-host"></small>
+            </div>
+            <span id="url-mascot" class="result-mascot mascot-sunflower" aria-hidden="true"></span>
+          </div>
+          <ul id="url-signals" class="signal-list"></ul>
+          <div class="result-actions">
+            <button id="open-detail" class="primary-button" type="button">상세 보기</button>
+            <button class="quiet-button" type="button" disabled title="신고 서버 연결 후 사용 가능">오탐 신고 준비 중</button>
+          </div>
+        </section>
+
+        <form id="url-form" class="input-section">
+          <label for="url-input" class="section-label">다른 URL 직접 검사</label>
+          <div class="input-row">
+            <input id="url-input" type="text" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://example.com">
+            <button class="primary-button" type="submit">검사</button>
+          </div>
+          <button id="fill-demo" class="sample-button" type="button">시연용 의심 주소 넣기</button>
+        </form>
+
+        <div id="url-error" class="error-message" role="alert" hidden></div>
+        <p class="disclosure">현재는 URL 구조만 살피는 1차 규칙 검사입니다. 피싱 여부를 확정하지 않습니다.</p>
+      </section>
+
+      <section id="email-view" class="view" role="tabpanel" aria-labelledby="email-tab" hidden>
+        <form id="email-form">
+          <label for="email-title" class="section-label">이메일 제목</label>
+          <input id="email-title" class="full-input" type="text" placeholder="받은 이메일 제목을 붙여넣으세요">
+          <label for="email-body" class="section-label">이메일 본문</label>
+          <textarea id="email-body" class="full-input" rows="6" placeholder="검사할 이메일 내용을 붙여넣으세요"></textarea>
+          <button id="fill-email-demo" class="sample-button email-sample" type="button">시연용 이메일 넣기</button>
+          <p class="privacy-note">메일함을 자동으로 읽지 않습니다. 입력한 내용은 저장하지 않습니다.</p>
+          <button class="primary-button" type="submit">이메일 검사</button>
+        </form>
+        <div id="email-error" class="error-message" role="alert" hidden></div>
+        <section id="email-result" class="result" aria-live="polite" hidden>
+          <div class="result-top">
+            <span id="email-status-icon" class="status-icon" aria-hidden="true">!</span>
+            <div><strong id="email-headline"></strong><small>문구·링크 규칙 검사 결과</small></div>
+            <span id="email-mascot" class="result-mascot mascot-sunflower" aria-hidden="true"></span>
+          </div>
+          <ul id="email-signals" class="signal-list"></ul>
+        </section>
+        <p class="disclosure">이메일 AI 모델과 서버 API는 아직 연결되지 않았습니다.</p>
+      </section>
+    </main>
+  </body>
+</html>
