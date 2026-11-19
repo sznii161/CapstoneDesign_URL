@@ -18,3 +18,8 @@ predictions/
 credentials*
 .DS_Store
 Thumbs.db
+/models/
+*.joblib
+*.onnx
+*.zip
+.github_upload/

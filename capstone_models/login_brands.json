@@ -1,0 +1,17 @@
+{
+  "naver": {
+    "hosts": ["nid.naver.com"],
+    "source": "https://nid.naver.com/nidlogin.login",
+    "reference": "naver.png"
+  },
+  "kakao": {
+    "hosts": ["accounts.kakao.com"],
+    "source": "https://accounts.kakao.com/login?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount%2Finfo",
+    "reference": "kakao.png"
+  },
+  "woori": {
+    "hosts": ["svc.wooribank.com", "spib.wooribank.com", "m.wooribank.com"],
+    "source": "https://svc.wooribank.com/svc/Dream?withyou=PSTAX0063",
+    "reference": "woori.png"
+  }
+}
